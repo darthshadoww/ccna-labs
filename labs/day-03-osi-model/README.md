@@ -35,9 +35,7 @@ Use Packet Tracer's **Simulation Mode** to watch real traffic move through the n
 
 **Topology screenshot:**
 
-> _Placeholder — drop `day03-topology.png` in this lab folder_
->
-> ![Day 03 topology](day03-topology.png)
+![Uploading image.png…]()
 
 ## 🧩 OSI model refresher
 
@@ -78,10 +76,7 @@ ipconfig /renew
 `release` sends a **DHCP Release**; `renew` triggers **DHCP Discover → Offer → Request → Ack (DORA)** — all **Layer 7** application messages riding on **UDP (L4)**. Watch the DORA exchange step-by-step in Simulation Mode and inspect the OSI tab of each DHCP packet.
 
 **CLI evidence:**
-
-> _Placeholder — drop `day03-ipconfig-release.png` in this lab folder_
->
-> ![PC1 ipconfig release](day03-ipconfig-release.png)
+<img width="1446" height="1322" alt="image" src="https://github.com/user-attachments/assets/1ae1bc3b-5612-4092-8f00-3c3e6b1c699b" />
 
 Reference output captured:
 
