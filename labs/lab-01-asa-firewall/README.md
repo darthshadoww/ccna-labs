@@ -111,7 +111,7 @@ Capture screenshots of a successful ping and a blocked ATTACKER ping into `scree
 
 ## 💡 What I learned
 
-_(write 2–3 sentences after finishing — e.g. how ASA security levels differ from a router ACL, why the stateful firewall lets return traffic back without an explicit rule, and anything that tripped you up.)_
+I learned how to work with CCNA packet Tracker and gained overall knowledge 
 
 ## 📎 Files in this lab
 
