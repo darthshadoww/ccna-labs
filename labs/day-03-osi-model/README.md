@@ -11,18 +11,8 @@
 Use Packet Tracer's **Simulation Mode** to watch real traffic move through the network and identify which **OSI layers** each protocol operates at. Then release and renew PC1's IP address to generate **Layer 7 (application)** traffic and analyze it packet-by-packet.
 
 ## 🗺️ Topology
+<img width="2600" height="1682" alt="image" src="https://github.com/user-attachments/assets/d1c29fb5-d78f-4f1a-bf0f-5765d40d5e87" />
 
-```
-        192.168.1.0/24                                 10.0.0.0/24
- SRV1 ──┐                                                        
- (.100) │                                                        
-        SW1 ──G0/0── R1 ══(serial/link)══ R2                     
- (2960) │        (2911 .1)          (2911 .2)                    
-        │G0/1                                                    
-        │                                                        
- PC1 ── SW2                                                      
-        (2960)                                                   
-```
 
 | Device | Interface / IP | Notes |
 |--------|----------------|-------|
