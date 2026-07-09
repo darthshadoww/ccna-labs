@@ -1,0 +1,22 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Packet Tracer temp/backup files
+*.pkt.bak
+*.pka.bak
+~*
+
+# Obsidian workspace (keep exported .md, ignore vault config)
+.obsidian/
+
+# Editor
+.vscode/
+*.swp
+
+# NEVER commit secrets — tokens, passwords, keys
+*.token
+*.pem
+secrets.*
+.env
