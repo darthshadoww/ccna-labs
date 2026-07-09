@@ -23,6 +23,7 @@ ccna/
 | # | Lab | Topic | Evidence |
 |---|-----|-------|----------|
 | 01 | [ASA 5505 Firewall — Basic Settings & Firewall](labs/lab-01-asa-firewall/) | Security / ASA | ✅ writeup · ⬜ .pkt · ⬜ screenshot |
+| 03 | [The OSI Model — Simulation Mode](labs/day-03-osi-model/) | OSI / protocol analysis | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 
 *(rows added as labs are completed)*
 
