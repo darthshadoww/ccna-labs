@@ -15,6 +15,7 @@ Build a two-site network (New York ↔ Tokyo) connected across "the Internet," p
 - Basic device hardening and connectivity are verified.
 
 ## 🗺️ Topology
+<img width="1033" height="424" alt="image" src="https://github.com/user-attachments/assets/b204385e-bb76-48aa-80ad-8e1a79009614" />
 
 ```
  New York Branch                      The Internet                 Tokyo Branch
