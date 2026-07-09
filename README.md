@@ -10,10 +10,10 @@ My hands-on journey toward the **Cisco Certified Network Associate (CCNA 200-301
 
 ```
 ccna/
-├── labs/          # One folder per lab: writeup + .pkt file + evidence
-│   └── lab-01-asa-firewall/
+├── labs/          # One folder per lab: writeup + .pkt file + screenshots
+│   ├── lab-01-asa-firewall/
+│   └── day-03-osi-model/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
-├── screenshots/   # Topology + verification screenshots
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
 ```
@@ -33,7 +33,7 @@ Every lab folder contains:
 
 1. **`README.md`** — objective, topology, step-by-step config, verification, and what I learned.
 2. **The `.pkt` file** — the actual Packet Tracer save, so anyone can open and inspect it.
-3. **Evidence** — screenshots of the topology and successful verification (pings, `show` output, etc.).
+3. **Evidence** — screenshots of the topology and successful verification (pings, `show` output, etc.), saved **inside the lab's own folder**.
 
 ## 📚 Study notes
 

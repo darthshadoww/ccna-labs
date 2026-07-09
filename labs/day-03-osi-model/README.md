@@ -35,9 +35,9 @@ Use Packet Tracer's **Simulation Mode** to watch real traffic move through the n
 
 **Topology screenshot:**
 
-> _Placeholder — add `screenshots/day03-topology.png`_
+> _Placeholder — drop `day03-topology.png` in this lab folder_
 >
-> ![Day 03 topology](../../screenshots/day03-topology.png)
+> ![Day 03 topology](day03-topology.png)
 
 ## 🧩 OSI model refresher
 
@@ -79,9 +79,9 @@ ipconfig /renew
 
 **CLI evidence:**
 
-> _Placeholder — add `screenshots/day03-ipconfig-release.png`_
+> _Placeholder — drop `day03-ipconfig-release.png` in this lab folder_
 >
-> ![PC1 ipconfig release](../../screenshots/day03-ipconfig-release.png)
+> ![PC1 ipconfig release](day03-ipconfig-release.png)
 
 Reference output captured:
 
@@ -119,4 +119,4 @@ _(2–3 sentences after finishing — e.g. how encapsulation adds a header at ea
 
 - `README.md` — this writeup
 - `day03-osi-model.pkt` — Packet Tracer save _(add your file)_
-- Screenshots in [`../../screenshots/`](../../screenshots/): `day03-topology.png`, `day03-ipconfig-release.png`
+- Screenshots in this folder: `day03-topology.png`, `day03-ipconfig-release.png`

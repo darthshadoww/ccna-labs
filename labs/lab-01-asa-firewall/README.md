@@ -40,9 +40,9 @@ Devices:
 | SR1, SR2 | Servers (Tokyo) |
 | ATTACKER | Untrusted host on the outside/Internet |
 
-> Add the topology screenshot as `../../screenshots/lab01-topology.png` and it will render below.
+> Add the topology screenshot as `lab01-topology.png` in this lab folder and it will render below.
 >
-> `![Topology](../../screenshots/lab01-topology.png)`
+> `![Topology](lab01-topology.png)`
 
 ## 🔐 Key ASA concepts practiced
 
@@ -107,7 +107,7 @@ write memory
 | `show run nat` / `show xlate` | Translations building for inside traffic |
 | `show route` | Default route present |
 
-Capture screenshots of a successful ping and a blocked ATTACKER ping into `screenshots/` as evidence.
+Capture screenshots of a successful ping and a blocked ATTACKER ping into this lab folder as evidence.
 
 ## 💡 What I learned
 
@@ -117,5 +117,5 @@ I learned how to work with CCNA packet Tracker and gained overall knowledge
 
 - `README.md` — this writeup
 - `lab01.pkt` — Packet Tracer save _(add your file here)_
-- Evidence screenshots live in [`../../screenshots/`](../../screenshots/)
+- Evidence screenshots live in this lab folder (e.g. `lab01-topology.png`, `lab01-ping-success.png`)
 - Device configs (optional) in [`../../configs/`](../../configs/)
