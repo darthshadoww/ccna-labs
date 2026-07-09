@@ -97,8 +97,7 @@ After `/release` the interface drops to `0.0.0.0`; after `/renew` it should pull
 | DHCP exchange visible | Discover / Offer / Request / Ack |
 
 ## 💡 What I learned
-
-_(2–3 sentences after finishing — e.g. how encapsulation adds a header at each layer going down and strips it going up, why ARP shows both L2 and L3 info, and how DHCP is an application-layer protocol even though it's about IP addressing.)_
+I learned TCP/IP and OSI Layers and what they do. I learned frames, packages and Datagrams. Their workload differs from Layer to Layer. 
 
 ## 📎 Files in this lab
 
