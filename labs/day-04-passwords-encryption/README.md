@@ -13,9 +13,8 @@ Harden a router (R1) and switch (SW1) by setting hostnames and enable-mode passw
 
 ## 🗺️ Topology
 
-> _Placeholder — drop `day04-topology.png` in this lab folder_
->
-> ![Day 04 topology](day04-topology.png)
+<img width="1044" height="417" alt="image" src="https://github.com/user-attachments/assets/8c843d97-a29c-4375-beed-1a89cfc1e1e9" />
+
 
 ```
  R1 (2911) ── SW1 (2960-24TT) ──┬── PC1
@@ -74,37 +73,45 @@ copy running-config startup-config   ! or: write memory
 `show running-config` → `enable password 7 08221D5D0A16...` (now obscured).
 
 > R1 — _`day04-encrypted-r1.png`_
-> ![R1 type 7](day04-encrypted-r1.png)
+<img width="774" height="724" alt="image" src="https://github.com/user-attachments/assets/38387cc5-cb63-4273-a1c3-39cf9e0532a1" />
+
 >
 > SW1 — _`day04-encrypted-sw1.png`_
-> ![SW1 type 7](day04-encrypted-sw1.png)
+<img width="804" height="724" alt="image" src="https://github.com/user-attachments/assets/679dfcf3-f842-4d23-ac32-a34b6dfd70f9" />
+
 
 ### 3️⃣ `enable secret` type-5 in running-config (Step 9)
 `show running-config` → `enable secret 5 $1$...` alongside `enable password 7 ...`.
 
 > R1 — _`day04-secret-r1.png`_
-> ![R1 secret](day04-secret-r1.png)
+<img width="822" height="724" alt="image" src="https://github.com/user-attachments/assets/b2673988-a12f-4db6-ac28-9c21792f47a6" />
+
 >
 > SW1 — _`day04-secret-sw1.png`_
-> ![SW1 secret](day04-secret-sw1.png)
+<img width="832" height="724" alt="image" src="https://github.com/user-attachments/assets/21bdef21-9a60-4184-a637-206ef7a1c35c" />
+
 
 ### 4️⃣ Testing which password is required (Step 8)
 After `disable` → `enable`, the device demands **`Cisco`** (the secret), not `CCNA`.
 
 > R1 — _`day04-test-secret-r1.png`_
-> ![R1 test](day04-test-secret-r1.png)
+<img width="774" height="724" alt="image" src="https://github.com/user-attachments/assets/02b55e39-ba89-4973-b64d-4cbacf6780e2" />
+
 >
 > SW1 — _`day04-test-secret-sw1.png`_
-> ![SW1 test](day04-test-secret-sw1.png)
+<img width="828" height="724" alt="image" src="https://github.com/user-attachments/assets/cfedab73-87b5-4246-9591-a205ff73f635" />
+
 
 ### 5️⃣ Saving the config (Step 10)
 `copy running-config startup-config` → `[OK]`.
 
 > R1 — _`day04-save-r1.png`_
-> ![R1 save](day04-save-r1.png)
+<img width="819" height="724" alt="image" src="https://github.com/user-attachments/assets/5d64fa12-dc4b-41a0-943a-3bf594543cce" />
+
 >
 > SW1 — _`day04-save-sw1.png`_
-> ![SW1 save](day04-save-sw1.png)
+<img width="828" height="724" alt="image" src="https://github.com/user-attachments/assets/625aa552-c81e-4693-b299-913df8d52b26" />
+
 
 ## ❓ Lab questions & answers
 
@@ -126,7 +133,11 @@ After `disable` → `enable`, the device demands **`Cisco`** (the secret), not `
 
 ## 💡 What I learned
 
-_(2–3 sentences — e.g. why type 7 is not real security, how `enable secret` supersedes `enable password`, and what `service password-encryption` does / doesn't protect.)_
+i learned how CLI works with the helpf of slides provided in YouTube by Jeremy's IT Lab. Basiacally there are some terms to know like enable password,
+enable secret and service password-encryption: they do hash the password, secret is more secure.
+If you forgot your password you can reset with the help of a rollover cable through your pc with PuTTy. If you disable password recovery. with this command:
+'Router(config)# no service password-recovery'
+ If you type this command, you are on your own. If you ever forget your password, there is absolutely no way to get back into that router short of physically replacing components (like the NVRAM chip). It is a "no-turning-back" security feature.
 
 ## 📎 Files in this lab
 
