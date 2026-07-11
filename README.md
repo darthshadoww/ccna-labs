@@ -13,7 +13,8 @@ ccna/
 ├── labs/          # One folder per lab: writeup + .pkt file + screenshots
 │   ├── lab-01-asa-firewall/
 │   ├── day-03-osi-model/
-│   └── day-04-passwords-encryption/
+│   ├── day-04-passwords-encryption/
+│   └── day-06-mac-arp/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -26,6 +27,7 @@ ccna/
 | 01 | [ASA 5505 Firewall — Basic Settings & Firewall](labs/lab-01-asa-firewall/) | Security / ASA | ✅ writeup · ⬜ .pkt · ⬜ screenshot |
 | 03 | [The OSI Model — Simulation Mode](labs/day-03-osi-model/) | OSI / protocol analysis | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 | 04 | [Device Passwords & Encryption](labs/day-04-passwords-encryption/) | IOS hardening / passwords | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
+| 06 | [MAC Address Tables & ARP](labs/day-06-mac-arp/) | Switching / ARP | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 
 *(rows added as labs are completed)*
 
