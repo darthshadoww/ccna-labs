@@ -13,9 +13,8 @@ Starting from **empty MAC address tables** on both switches and **empty ARP tabl
 
 ## 🗺️ Topology
 
-> _Placeholder 1 — drop `day06-topology.png` in this lab folder_
->
-> ![Day 06 topology](day06-topology.png)
+<img width="2532" height="616" alt="image" src="https://github.com/user-attachments/assets/34696006-5c9b-4838-92df-16b4ac53e936" />
+
 
 ```
  PC1(.1) ─┐                                   ┌─ PC3(.3)
@@ -52,9 +51,8 @@ ping 192.168.1.3
 ```
 (Note: `ping PC3` fails — "could not find host" — because there's no DNS; ping the IP instead.)
 
-> _Placeholder 2 — `day06-pc1-ping.png` (4 replies, 0% loss)_
->
-> ![PC1 ping success](day06-pc1-ping.png)
+<img width="740" height="724" alt="image" src="https://github.com/user-attachments/assets/053ab4ed-7a23-4d17-80d7-fbd2be28021a" />
+
 
 Observed:
 ```
@@ -70,9 +68,6 @@ Ping between the PCs so each switch sees a frame sourced from every host. Watch 
 arp -a
 ```
 
-> _Placeholder 3 — `day06-pc1-arp.png` (shows the dynamic ARP entry)_
->
-> ![PC1 arp -a](day06-pc1-arp.png)
 
 Observed:
 ```
@@ -87,10 +82,8 @@ On **SW1 / SW2** (privileged EXEC, or `do show` from config mode):
 ```
 show mac address-table
 ```
+<img width="713" height="724" alt="image" src="https://github.com/user-attachments/assets/66cdcb01-e791-4c33-a82d-2d2789ec837d" />
 
-> _Placeholder 4 — `day06-sw1-mac-table.png` (learned dynamic entries)_
->
-> ![SW1 MAC table](day06-sw1-mac-table.png)
 
 Observed on SW1:
 ```
@@ -106,10 +99,8 @@ clear mac address-table dynamic
 show mac address-table
 ```
 > ⚠️ `clear mac address-table dynamic` is a **privileged EXEC** command. From config mode it errors ("Invalid input"); prefix it with `do`: `do clear mac address-table dynamic`.
+<img width="732" height="724" alt="image" src="https://github.com/user-attachments/assets/415d7afa-0ba0-4c6e-880c-80f107e2a056" />
 
-> _Placeholder 5 — `day06-sw1-clear-mac.png` (table empty after clearing)_
->
-> ![SW1 cleared table](day06-sw1-clear-mac.png)
 
 After clearing, the table is empty until new traffic re-populates it (switches also age out entries automatically after 300 s of inactivity by default).
 
@@ -125,7 +116,7 @@ After clearing, the table is empty until new traffic re-populates it (switches a
 
 ## 💡 What I learned
 
-_(2–3 sentences — e.g. why the first ping sometimes shows 50% loss, the difference between a broadcast ARP Request and a unicast ARP Reply, and how the Ports column maps a MAC to a switch port.)_
+I learned how to send ARP request, how to send ping over internet. I also learned how to see MAC table in Switch and how Switch dynamically learns the MAC Addresses of the devices by ARP Requests. I also saw how ping success at first fails every time. It was because of lacking ARP Request
 
 ## 📎 Files in this lab
 
