@@ -13,9 +13,8 @@ Configure router **R1** so it connects three separate LANs (behind SW1, SW2, SW3
 
 ## 🗺️ Topology
 
-> _Placeholder — drop the lab's own topology photo as `day08-topology.png`_
->
-> ![Day 08 topology](day08-topology.png)
+<img width="1440" height="932" alt="image" src="https://github.com/user-attachments/assets/d2be94ab-6b1f-4c7d-8700-7344522676c5" />
+
 
 | Router interface | IP address | Mask | Description | Network |
 |------------------|-----------|------|-------------|---------|
@@ -29,7 +28,6 @@ Configure router **R1** so it connects three separate LANs (behind SW1, SW2, SW3
 | PC2 | 182.98.0.1 | 255.255.0.0 | 182.98.255.254 |
 | PC3 | 201.191.20.1 | 255.255.255.0 | 201.192.20.1 |
 
-> _(Use the exact addresses from your own `.pkt` — the values above are read off the screenshots.)_
 
 ## 🧠 Addressing concept — host vs network address
 
@@ -50,9 +48,8 @@ do show ip interface brief      ! interfaces start "unassigned / administrativel
 ```
 > ℹ️ The correct verification command is **`show ip interface brief`** (not `show ip address-config`, which IOS rejects as invalid).
 
-> _Placeholder — `day08-answer1-2.png` (hostname set + initial `show ip interface brief`)_
->
-> ![Answer 1 & 2](day08-answer1-2.png)
+<img width="784" height="724" alt="image" src="https://github.com/user-attachments/assets/0f0b85ec-48db-4e51-adbc-3e810ea1c3cb" />
+
 
 ### 3 — Configure an interface (IP + description + enable)
 ```
@@ -75,8 +72,8 @@ do show ip interface brief
 All three (G0/0, G0/1, G0/2) should read **`up / up`** with their assigned IPs.
 
 > _Placeholder — `day08-answer4.png` (all interfaces up with IPs)_
->
-> ![Answer 4](day08-answer4.png)
+<img width="764" height="724" alt="image" src="https://github.com/user-attachments/assets/12170bd0-14a1-47ed-b2f9-cbc06882120a" />
+
 
 ### 5.1 — Review the running-config
 ```
@@ -85,8 +82,8 @@ do show running-config
 Confirms each interface's `ip address`, `description`, and that none are shut down.
 
 > _Placeholder — `day08-answer5-1.png` (`show running-config` interface sections)_
->
-> ![Answer 5.1](day08-answer5-1.png)
+<img width="783" height="724" alt="image" src="https://github.com/user-attachments/assets/5523627f-062f-4cd4-a5d1-ab333acbeb78" />
+
 
 ### 5.2 — Save to startup-config
 ```
@@ -95,22 +92,24 @@ do copy running-config startup-config
 ! Building configuration... [OK]
 ```
 
-> _Placeholder — `day08-answer5-2.png` (`copy run start` → [OK])_
->
-> ![Answer 5.2](day08-answer5-2.png)
+<img width="784" height="724" alt="image" src="https://github.com/user-attachments/assets/65784d12-47ea-46a7-aed8-b05439804df8" />
+
 
 ## 💻 PC configuration (Static IPv4)
 
 On each PC → **Config → FastEthernet0 → IP Configuration → Static**, set the IPv4 address, subnet mask, and default gateway (the router interface on that PC's network).
 
 > _Placeholder — `day08-pc1-config.png` (PC1: 15.0.0.1 /8)_
-> ![PC1 config](day08-pc1-config.png)
+<img width="717" height="724" alt="image" src="https://github.com/user-attachments/assets/801d1b51-1ad0-4730-93b2-2d050e6cbabd" />
+
 >
 > _Placeholder — `day08-pc2-config.png` (PC2: 182.98.0.1 /16)_
-> ![PC2 config](day08-pc2-config.png)
+<img width="788" height="724" alt="image" src="https://github.com/user-attachments/assets/ca971b42-3546-48bb-90b3-cf8e5f99e988" />
+
 >
 > _Placeholder — `day08-pc3-config.png` (PC3: 201.191.20.1 /24)_
-> ![PC3 config](day08-pc3-config.png)
+<img width="702" height="724" alt="image" src="https://github.com/user-attachments/assets/e99c4b12-0709-4845-97b3-2cc4f2eb3d31" />
+
 
 ## ✅ Verification — ping across networks
 
@@ -121,9 +120,10 @@ ping 182.98.0.1        ! PC2's network
 ```
 Expect the **first packet to time out** (ARP to the gateway resolving) then replies — e.g. `Sent = 4, Received = 3, Lost = 1 (25% loss)`. Success across subnets proves R1 is routing between the LANs.
 
-> _Placeholder — `day08-pc1-ping.png` (PC1 pinging across networks)_
+>  — `day08-pc1-ping.png` (PC1 pinging across networks)_
 >
-> ![PC1 ping](day08-pc1-ping.png)
+<img width="701" height="724" alt="image" src="https://github.com/user-attachments/assets/b09d5d0f-1c14-4722-abd8-5afd41f6e063" />
+
 
 ## 💡 What I learned
 
