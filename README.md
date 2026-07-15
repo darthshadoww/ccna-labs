@@ -15,7 +15,8 @@ ccna/
 │   ├── day-03-osi-model/
 │   ├── day-04-passwords-encryption/
 │   ├── day-06-mac-arp/
-│   └── day-08-router-config/
+│   ├── day-08-router-config/
+│   └── day-09-interface-config/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -30,6 +31,7 @@ ccna/
 | 04 | [Device Passwords & Encryption](labs/day-04-passwords-encryption/) | IOS hardening / passwords | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 | 06 | [MAC Address Tables & ARP](labs/day-06-mac-arp/) | Switching / ARP | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 | 08 | [Router Configuration — Connecting Networks](labs/day-08-router-config/) | Routing / IPv4 addressing | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
+| 09 | [Switch & Router Interface Configuration](labs/day-09-interface-config/) | Interfaces / speed-duplex / port security | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 
 *(rows added as labs are completed)*
 
