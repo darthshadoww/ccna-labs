@@ -13,10 +13,8 @@
 Take one router (R1) and two switches (SW1, SW2) in a single `172.16.0.0/16` LAN and configure them properly: set hostnames, address the router + PCs, **manually set speed/duplex on the device-to-device links**, describe every interface, **shut down the unused switch ports**, and save.
 
 ## 🗺️ Topology
+<img width="1108" height="724" alt="image" src="https://github.com/user-attachments/assets/730ba128-0043-4c4a-b04b-b2ae2f75cc2d" />
 
-> _Placeholder — drop the lab's own topology/tasks photo as `day09-topology.png`_
->
-> ![Day 09 topology](day09-topology.png)
 
 Network: **172.16.0.0/16** (mask 255.255.0.0, gateway = R1 = 172.16.255.254)
 
@@ -50,9 +48,8 @@ enable
 configure terminal
 hostname SW1        ! (hostname SW2 / hostname R1 on the others)
 ```
-> _Placeholder — `day09-answer1.png` (SW1 hostname set, link-up messages)_
->
-> ![Answer 1 — hostname](day09-answer1.png)
+<img width="777" height="724" alt="image" src="https://github.com/user-attachments/assets/b3e3f274-740e-4e23-87fd-cce4a0796c00" />
+
 
 ### 2 — IP addressing (R1 + PCs)
 R1's routed interface:
@@ -64,8 +61,8 @@ interface g0/0
 PCs: **Config → FastEthernet0 → IP Configuration → Static** → IP `172.16.0.x`, mask `255.255.0.0`, gateway `172.16.255.254`.
 
 > _Placeholder — `day09-answer2.png` (R1 G0/0 IP config + equivalent IOS commands)_
->
-> ![Answer 2 — R1 IP](day09-answer2.png)
+<img width="751" height="724" alt="image" src="https://github.com/user-attachments/assets/882a6cda-bd46-4856-b417-70810918c6df" />
+
 
 ### 3 — Manual speed & duplex on device-to-device links only
 Only the **router↔switch** and **switch↔switch** (Gigabit) links — *not* the ports to PCs:
@@ -75,8 +72,8 @@ interface g0/0            ! on R1  (and g0/1, g0/2 on SW1; g0/1 on SW2)
  duplex full
 ```
 > _Placeholder — `day09-answer3.png` (R1: speed 1000 / duplex full on G0/0)_
->
-> ![Answer 3 — R1 speed/duplex](day09-answer3.png)
+<img width="712" height="724" alt="image" src="https://github.com/user-attachments/assets/f66b47a9-d1f1-4803-967c-9e667a3a8c59" />
+
 
 ### 4 — Descriptions on each interface
 ```
@@ -87,9 +84,8 @@ interface g0/2
 ```
 Verify with `do show interfaces status` (or `show int status`).
 
-> _Placeholder — `day09-answer4.png` (SW1 speed/duplex + descriptions + `show int status`)_
->
-> ![Answer 4 — SW1 config](day09-answer4.png)
+<img width="1030" height="724" alt="image" src="https://github.com/user-attachments/assets/82b8b7cf-50e0-48c4-9f04-89ac480190c5" />
+
 
 ### 5 — Disable unused interfaces
 Bring up the ports in use, then shut and label the rest so nobody can plug into a live port:
@@ -104,8 +100,8 @@ interface range f0/3 - 24
 Each disabled port reports `changed state to administratively down`.
 
 > _Placeholder — `day09-answer5.png` (SW1 disabling the unused port range)_
->
-> ![Answer 5 — disable unused ports](day09-answer5.png)
+<img width="1072" height="724" alt="image" src="https://github.com/user-attachments/assets/b0f781b6-1a57-4fd5-a4b1-9f69a329f3a3" />
+
 
 ### 6 — Save the configuration
 ```
@@ -115,8 +111,8 @@ copy running-config startup-config      ! press Enter → Building configuration
 > ℹ️ `show int status` on a **router** returns "Invalid input" — that's a switch command; use `show ip interface brief` on R1.
 
 > _Placeholder — `day09-answer6.png` (R1 `show ip int brief` + `copy run start` [OK])_
->
-> ![Answer 6 — verify + save](day09-answer6.png)
+<img width="1059" height="724" alt="image" src="https://github.com/user-attachments/assets/64c8eebd-d900-41d3-8b38-38f3020e5e27" />
+
 
 ## ✅ Verification
 
