@@ -98,4 +98,4 @@ Static routing means adding an explicit route for each remote network and pointi
 
 - `README.md` — this writeup
 - `day11-static-routing-part1.pkt` — Packet Tracer save _(add your file)_
-- `day11-part1-r1-routes.png` … `day11-part1-verification.png` — screenshots
+- `day11-part1-r1-routes.svg` … `day11-part1-verification.svg` — screenshots
