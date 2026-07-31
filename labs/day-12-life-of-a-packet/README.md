@@ -18,7 +18,7 @@ Two LANs are connected through R1, R2, and R3:
 - Transit links: `192.168.12.0/24` and `192.168.13.0/24`
 - LAN 3: `192.168.3.0/24` — PC4, PC5, PC6 and SW2
 
-![Day 12 topology and lab tasks](day12-topology.svg)
+![Day 12 topology and lab tasks](day12-topology.png)
 
 ## 🔬 Packet journey: PC4 → PC1
 
@@ -34,7 +34,7 @@ Destination IP: 192.168.1.1
 ICMP type:      8 (Echo Request)
 ```
 
-![PC4 creates the ICMP Echo Request](day12-pc4-pdu.svg)
+![PC4 creates the ICMP Echo Request](day12-pc4-pdu.png)
 
 ### 2 — The routers route the packet
 
@@ -46,17 +46,17 @@ At R3, R2, and R1, the IP header stays the same: source `192.168.3.1`, destinati
 | R2 | G0/1 | G0/0 | New frame addressed to R1 |
 | R1 | G0/1 | G0/0 | New frame addressed toward SW1 / PC1 LAN |
 
-![R3 rebuilds the frame for R2](day12-r3-pdu.svg)
+![R3 rebuilds the frame for R2](day12-r3-pdu.png)
 
-![R2 rebuilds the frame for R1](day12-r2-pdu.svg)
+![R2 rebuilds the frame for R1](day12-r2-pdu.png)
 
-![R1 rebuilds the frame toward LAN 1](day12-r1-pdu.svg)
+![R1 rebuilds the frame toward LAN 1](day12-r1-pdu.png)
 
 ### 3 — Switch forwarding
 
 SW2 does not route the packet or change the IP header. It forwards the Ethernet frame out the access port selected from its MAC address table.
 
-![SW2 forwards the Ethernet frame](day12-sw2-pdu.svg)
+![SW2 forwards the Ethernet frame](day12-sw2-pdu.png)
 
 ## 🧠 Key idea: what changes at each hop?
 
@@ -69,11 +69,11 @@ SW2 does not route the packet or change the IP header. It forwards the Ethernet 
 
 The interface output confirms the MAC addresses used on the transit links:
 
-![R1 interface details](day12-r1-interface.svg)
+![R1 interface details](day12-r1-interface.png)
 
-![R2 interface details](day12-r2-interface.svg)
+![R2 interface details](day12-r2-interface.png)
 
-![R3 interface details](day12-r3-interface.svg)
+![R3 interface details](day12-r3-interface.png)
 
 ## ✅ Verification
 
