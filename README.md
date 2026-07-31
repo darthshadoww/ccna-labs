@@ -16,7 +16,10 @@ ccna/
 │   ├── day-04-passwords-encryption/
 │   ├── day-06-mac-arp/
 │   ├── day-08-router-config/
-│   └── day-09-interface-config/
+│   ├── day-09-interface-config/
+│   ├── day-11-static-routing-part-1/
+│   ├── day-11-2-troubleshooting-static-routes/
+│   └── day-12-life-of-a-packet/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -32,6 +35,10 @@ ccna/
 | 06 | [MAC Address Tables & ARP](labs/day-06-mac-arp/) | Switching / ARP | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 | 08 | [Router Configuration — Connecting Networks](labs/day-08-router-config/) | Routing / IPv4 addressing | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
 | 09 | [Switch & Router Interface Configuration](labs/day-09-interface-config/) | Interfaces / speed-duplex / port security | ✅ writeup · ⬜ .pkt · ⬜ screenshots |
+
+| 11.1 | [Static Routing — Part 1](labs/day-11-static-routing-part-1/) | Static routing across three routers | ✅ writeup · ⬜ .pkt · ✅ 6 screenshots |
+| 11.2 | [Troubleshooting Static Routes — Part 2](labs/day-11-2-troubleshooting-static-routes/) | Static-route troubleshooting | ✅ writeup · ⬜ .pkt · ✅ 5 screenshots |
+| 12 | [Life of a Packet](labs/day-12-life-of-a-packet/) | ICMP, ARP, Ethernet frames & routing | ✅ writeup · ⬜ .pkt · ✅ 9 screenshots |
 
 *(rows added as labs are completed)*
 
