@@ -179,7 +179,7 @@ VLSM is just subnetting applied more than once: pick the smallest prefix that st
 ## 📎 Files in this lab
 
 - `README.md` — this writeup
-- `day15-vlsm.pkt` — Packet Tracer save _(add your file)_
+- `day15-vlsm.pkt` — Packet Tracer save (`Day 15 Lab - VLSM.pkt`)
 - `day15-topology.png` — annotated topology (main photo)
 - `day15-r1-routes.png`, `day15-r2-routes.png` — CLI verification
 - `day15-pc1-ping.png` … `day15-pc4-ping.png` — end-to-end pings
