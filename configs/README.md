@@ -2,7 +2,12 @@
 
 Saved running-configurations and reusable CLI snippets per device.
 
-**Naming convention:** `labXX-<device>.txt` — e.g. `lab01-ASA1.txt`, `lab01-R1.txt`.
+**Naming convention:** `labXX-<device>.txt` or `dayXX-<device>.txt` — e.g. `lab01-ASA1.txt`, `day15-R1.txt`.
+
+| File | Lab |
+|------|-----|
+| [day15-R1.txt](day15-R1.txt) | Day 15 VLSM — R1 interfaces + static routes |
+| [day15-R2.txt](day15-R2.txt) | Day 15 VLSM — R2 interfaces + static routes |
 
 Grab a config from a device with:
 

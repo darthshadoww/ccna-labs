@@ -6,11 +6,11 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 
 | Notes | Lectures / topics covered |
 |-------|---------------------------|
-| _add your first export here_ | e.g. Lectures 1–10: network fundamentals, OSI/TCP-IP, cabling |
+| [Day 15 — VLSM](day-15-vlsm.md) | FLSM vs VLSM, host-bit formula, largest-first design, `/30` P2P, classless static routes |
 
 ## Suggested cheatsheets to add over time
 
-- Subnetting quick-reference (CIDR ↔ mask ↔ hosts)
+- Subnetting quick-reference (CIDR ↔ mask ↔ hosts) — started in [Day 15 — VLSM](day-15-vlsm.md)
 - OSI vs TCP/IP model with PDUs per layer
 - Common IOS commands (`show`, `config`, troubleshooting)
 - Port numbers & protocols

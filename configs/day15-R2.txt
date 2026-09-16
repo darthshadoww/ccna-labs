@@ -1,0 +1,23 @@
+! Day 15 — VLSM lab — R2
+! Reconstruct from verified show ip int brief / show ip route
+
+hostname R2
+
+interface GigabitEthernet0/0
+ description ## LAN3 (14 hosts) to SW3 ##
+ ip address 192.168.5.206 255.255.255.240
+ no shutdown
+
+interface GigabitEthernet0/1
+ description ## LAN4 (9 hosts) to SW4 ##
+ ip address 192.168.5.222 255.255.255.240
+ no shutdown
+
+interface GigabitEthernet0/0/0
+ description ## P2P to R1 ##
+ ip address 192.168.5.226 255.255.255.252
+ no shutdown
+
+! Remote VLSM subnets on R1 — use network addresses that match each mask
+ip route 192.168.5.0 255.255.255.128 192.168.5.225
+ip route 192.168.5.128 255.255.255.192 192.168.5.225
