@@ -1,0 +1,26 @@
+! Day 16 — VLANs (Part 1) — SW1
+! Access VLANs only. Router uplinks must match the VLAN of each R1 interface.
+
+hostname SW1
+
+vlan 10
+ name Engineering
+vlan 20
+ name HR
+vlan 30
+ name Sales
+
+! VLAN 10 — PC1 F3/1, PC2 F4/1, R1 G0/0 via G0/1
+interface range FastEthernet3/1, FastEthernet4/1, GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+
+! VLAN 20 — PC3 F5/1, PC4 F6/1, R1 G0/1 via G1/1
+interface range FastEthernet5/1, FastEthernet6/1, GigabitEthernet1/1
+ switchport mode access
+ switchport access vlan 20
+
+! VLAN 30 — PC5 F7/1, PC6 F8/1, R1 G0/2 via G2/1
+interface range FastEthernet7/1, FastEthernet8/1, GigabitEthernet2/1
+ switchport mode access
+ switchport access vlan 30

@@ -8,6 +8,8 @@ Saved running-configurations and reusable CLI snippets per device.
 |------|-----|
 | [day15-R1.txt](day15-R1.txt) | Day 15 VLSM — R1 interfaces + static routes |
 | [day15-R2.txt](day15-R2.txt) | Day 15 VLSM — R2 interfaces + static routes |
+| [day16-R1.txt](day16-R1.txt) | Day 16 VLANs — R1 one interface per VLAN |
+| [day16-SW1.txt](day16-SW1.txt) | Day 16 VLANs — SW1 access VLANs + router uplinks |
 
 Grab a config from a device with:
 

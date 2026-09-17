@@ -1,0 +1,19 @@
+! Day 16 — VLANs (Part 1) — R1
+! One physical interface per VLAN (not ROAS / 802.1Q)
+
+hostname R1
+
+interface GigabitEthernet0/0
+ description ## VLAN10 Engineering to SW1 G0/1 ##
+ ip address 10.0.0.62 255.255.255.192
+ no shutdown
+
+interface GigabitEthernet0/1
+ description ## VLAN20 HR to SW1 G1/1 ##
+ ip address 10.0.0.126 255.255.255.192
+ no shutdown
+
+interface GigabitEthernet0/2
+ description ## VLAN30 Sales to SW1 G2/1 ##
+ ip address 10.0.0.190 255.255.255.192
+ no shutdown
