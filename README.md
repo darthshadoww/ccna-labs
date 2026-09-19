@@ -21,7 +21,8 @@ ccna/
 │   ├── day-11-2-troubleshooting-static-routes/
 │   ├── day-12-life-of-a-packet/
 │   ├── day-15-vlsm/
-│   └── day-16-vlans/
+│   ├── day-16-vlans/
+│   └── day-17-vlans/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -42,6 +43,7 @@ ccna/
 | 12 | [Life of a Packet](labs/day-12-life-of-a-packet/) | ICMP, ARP, Ethernet frames & routing | ✅ writeup · ⬜ .pkt · ✅ 9 screenshots |
 | 15 | [VLSM — Variable Length Subnet Mask](labs/day-15-vlsm/) | VLSM subnetting / static routing | ✅ writeup · ✅ .pkt · ✅ 7 screenshots |
 | 16 | [VLANs — Part 1](labs/day-16-vlans/) | Access VLANs / inter-VLAN routing | ✅ writeup · ✅ .pkt · ✅ 6 screenshots · ✅ gif |
+| 17 | [VLANs — Part 2](labs/day-17-vlans/) | 802.1Q trunks / native VLAN / ROAS | ✅ writeup · ✅ .pkt · ✅ 5 screenshots · ✅ gif |
 
 *(rows added as labs are completed)*
 

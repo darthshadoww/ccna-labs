@@ -8,6 +8,7 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 |-------|---------------------------|
 | [Day 15 — VLSM](day-15-vlsm.md) | FLSM vs VLSM, host-bit formula, largest-first design, `/30` P2P, classless static routes |
 | [Day 16 — VLANs](day-16-vlans.md) | Access VLANs, broadcast domains, inter-VLAN routing on three physical links |
+| [Day 17 — VLANs Part 2](day-17-vlans.md) | 802.1Q trunks, native VLAN 1001, allowed lists, router-on-a-stick |
 
 ## Suggested cheatsheets to add over time
 
@@ -15,6 +16,6 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 - OSI vs TCP/IP model with PDUs per layer
 - Common IOS commands (`show`, `config`, troubleshooting)
 - Port numbers & protocols
-- VLAN / trunking / STP command reference — started in [Day 16 — VLANs](day-16-vlans.md)
+- VLAN / trunking / STP command reference — [Day 16](day-16-vlans.md) + [Day 17](day-17-vlans.md)
 - Static & dynamic routing (OSPF) command reference
 - ACL and NAT syntax patterns

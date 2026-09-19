@@ -1,0 +1,33 @@
+! Day 17 — VLANs (Part 2) — SW2
+! VLAN 20 lives only here. G0/1 to SW1 allows 10,30. G0/2 to R1 allows 10,20,30.
+
+hostname SW2
+
+vlan 10
+ name Engineering
+vlan 20
+ name HR
+vlan 30
+ name Sales
+vlan 1001
+ name NATIVE
+
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 20
+
+interface range FastEthernet0/2 - 3
+ switchport mode access
+ switchport access vlan 10
+
+interface GigabitEthernet0/1
+ description ## trunk to SW1 G0/1 ##
+ switchport mode trunk
+ switchport trunk native vlan 1001
+ switchport trunk allowed vlan 10,30
+
+interface GigabitEthernet0/2
+ description ## trunk to R1 G0/0 (ROAS) ##
+ switchport mode trunk
+ switchport trunk native vlan 1001
+ switchport trunk allowed vlan 10,20,30

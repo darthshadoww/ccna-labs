@@ -1,0 +1,20 @@
+! Day 17 — VLANs (Part 2) — R1 router-on-a-stick
+! Physical G0/0 has no IP. One subinterface per VLAN.
+
+hostname R1
+
+interface GigabitEthernet0/0
+ description ## 802.1Q trunk to SW2 G0/2 ##
+ no shutdown
+
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.0.0.62 255.255.255.192
+
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.0.0.126 255.255.255.192
+
+interface GigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 10.0.0.190 255.255.255.192

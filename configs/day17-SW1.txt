@@ -1,0 +1,25 @@
+! Day 17 — VLANs (Part 2) — SW1
+! Access VLANs 10 + 30. Trunk to SW2 allows only those two. Native VLAN 1001.
+
+hostname SW1
+
+vlan 10
+ name Engineering
+vlan 30
+ name Sales
+vlan 1001
+ name NATIVE
+
+interface range FastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+
+interface range FastEthernet0/3 - 4
+ switchport mode access
+ switchport access vlan 30
+
+interface GigabitEthernet0/1
+ description ## trunk to SW2 G0/1 ##
+ switchport mode trunk
+ switchport trunk native vlan 1001
+ switchport trunk allowed vlan 10,30
