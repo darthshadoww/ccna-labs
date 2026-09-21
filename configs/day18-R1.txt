@@ -1,0 +1,17 @@
+! Day 18 — Multilayer Switching — R1
+! ROAS removed. Routed /30 to SW2; G0/0/0 toward Internet.
+
+hostname R1
+
+interface GigabitEthernet0/0
+ description ## L3 P2P to SW2 G1/0/2 ##
+ ip address 10.0.0.194 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/0/0
+ description ## to Internet ##
+ ip address 1.1.1.2 255.255.255.0
+ no shutdown
+
+! Lab file already includes return routes toward 10.0.0.0 and a default out G0/0/0
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0

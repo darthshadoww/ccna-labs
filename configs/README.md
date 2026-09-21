@@ -13,6 +13,8 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day17-R1.txt](day17-R1.txt) | Day 17 VLANs — R1 router-on-a-stick |
 | [day17-SW1.txt](day17-SW1.txt) | Day 17 VLANs — SW1 access + trunk to SW2 |
 | [day17-SW2.txt](day17-SW2.txt) | Day 17 VLANs — SW2 trunks to SW1 and R1 |
+| [day18-R1.txt](day18-R1.txt) | Day 18 MLS — R1 /30 to SW2 + Internet |
+| [day18-SW2.txt](day18-SW2.txt) | Day 18 MLS — SW2 SVIs, routed port, default route |
 
 Grab a config from a device with:
 

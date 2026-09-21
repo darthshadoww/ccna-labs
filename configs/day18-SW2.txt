@@ -1,0 +1,45 @@
+! Day 18 — Multilayer Switching — SW2 (3650)
+! ip routing + SVIs + routed port to R1
+
+hostname SW2
+
+ip routing
+
+vlan 10
+ name Engineering
+vlan 20
+ name HR
+vlan 30
+ name Sales
+
+interface Vlan10
+ ip address 10.0.0.62 255.255.255.192
+ no shutdown
+
+interface Vlan20
+ ip address 10.0.0.126 255.255.255.192
+ no shutdown
+
+interface Vlan30
+ ip address 10.0.0.190 255.255.255.192
+ no shutdown
+
+interface GigabitEthernet1/0/1
+ description ## 802.1Q trunk to SW1 ##
+ switchport mode trunk
+
+interface GigabitEthernet1/0/2
+ description ## L3 P2P to R1 G0/0 ##
+ no switchport
+ ip address 10.0.0.193 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet1/0/3
+ switchport mode access
+ switchport access vlan 20
+
+interface range GigabitEthernet1/0/4 - 5
+ switchport mode access
+ switchport access vlan 10
+
+ip route 0.0.0.0 0.0.0.0 10.0.0.194
