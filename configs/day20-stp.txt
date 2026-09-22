@@ -1,0 +1,15 @@
+! Day 20 — Analyzing STP
+! Analysis lab. Priorities inferred from show spanning-tree
+! (displayed BID = configured priority + VLAN 1).
+
+! SW3 — root
+spanning-tree vlan 1 priority 24576
+
+! SW2 — second-lowest
+spanning-tree vlan 1 priority 28672
+
+! SW1 / SW4 — default 32768 (+ sys-id-ext 1 = 32769)
+
+! Verification on every switch
+show spanning-tree
+show spanning-tree root
