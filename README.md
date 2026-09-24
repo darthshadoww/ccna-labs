@@ -24,7 +24,8 @@ ccna/
 │   ├── day-16-vlans/
 │   ├── day-17-vlans/
 │   ├── day-18-multilayer-switching/
-│   └── day-20-analyzing-stp/
+│   ├── day-20-analyzing-stp/
+│   └── day-21-configuring-stp/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -48,6 +49,7 @@ ccna/
 | 17 | [VLANs — Part 2](labs/day-17-vlans/) | 802.1Q trunks / native VLAN / ROAS | ✅ writeup · ✅ .pkt · ✅ 5 screenshots · ✅ gif |
 | 18 | [Multilayer Switching](labs/day-18-multilayer-switching/) | SVIs / routed ports / ip routing | ✅ writeup · ✅ .pkt · ✅ 5 screenshots · ✅ 2 gifs |
 | 20 | [Analyzing STP](labs/day-20-analyzing-stp/) | 802.1D root / designated / alternate | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
+| 21 | [Configuring Spanning Tree](labs/day-21-configuring-stp/) | PVST+ roots / cost / PortFast / BPDU Guard | ✅ writeup · ✅ .pkt · ✅ 6 screenshots |
 
 *(rows added as labs are completed)*
 

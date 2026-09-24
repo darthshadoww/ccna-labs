@@ -1,0 +1,26 @@
+! Day 21 — Configuring Spanning Tree
+
+! SW1 — VLAN 1 primary root, VLAN 2 secondary
+spanning-tree vlan 1 root primary
+spanning-tree vlan 2 root secondary
+interface FastEthernet0/1
+ spanning-tree vlan 1 port-priority 240
+
+! SW2 — VLAN 2 primary root, VLAN 1 secondary
+spanning-tree vlan 2 root primary
+spanning-tree vlan 1 root secondary
+
+! SW4 — make the direct VLAN 1 link expensive so F0/1 becomes root port
+interface FastEthernet0/2
+ spanning-tree vlan 1 cost 1000
+interface FastEthernet0/3
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+! SW3 — edge port to PC1
+interface FastEthernet0/3
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+! recover after BPDU Guard err-disable (remove rogue switch first)
+ shutdown
+ no shutdown

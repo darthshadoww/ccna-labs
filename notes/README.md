@@ -11,6 +11,7 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 | [Day 17 — VLANs Part 2](day-17-vlans.md) | 802.1Q trunks, native VLAN 1001, allowed lists, router-on-a-stick |
 | [Day 18 — Multilayer switching](day-18-multilayer-switching.md) | SVIs, routed ports, `ip routing`, replacing ROAS |
 | [Day 20 — STP](day-20-stp.md) | Classic IEEE STP: BID, cost, root / designated / alternate |
+| [Day 21 — Configuring STP](day-21-configuring-stp.md) | root primary/secondary, port cost vs priority, PortFast, BPDU Guard |
 
 ## Suggested cheatsheets to add over time
 
@@ -18,6 +19,6 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 - OSI vs TCP/IP model with PDUs per layer
 - Common IOS commands (`show`, `config`, troubleshooting)
 - Port numbers & protocols
-- VLAN / trunking / STP command reference — [Day 16](day-16-vlans.md) + [Day 17](day-17-vlans.md) + [Day 20](day-20-stp.md)
+- VLAN / trunking / STP command reference — [Day 16](day-16-vlans.md) + [Day 17](day-17-vlans.md) + [Day 20](day-20-stp.md) + [Day 21](day-21-configuring-stp.md)
 - Static & dynamic routing (OSPF) command reference
 - ACL and NAT syntax patterns

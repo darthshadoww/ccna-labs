@@ -16,6 +16,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day18-R1.txt](day18-R1.txt) | Day 18 MLS — R1 /30 to SW2 + Internet |
 | [day18-SW2.txt](day18-SW2.txt) | Day 18 MLS — SW2 SVIs, routed port, default route |
 | [day20-stp.txt](day20-stp.txt) | Day 20 STP — priorities + show commands |
+| [day21-stp.txt](day21-stp.txt) | Day 21 STP — roots, cost, PortFast, BPDU Guard |
 
 Grab a config from a device with:
 
