@@ -25,7 +25,8 @@ ccna/
 │   ├── day-17-vlans/
 │   ├── day-18-multilayer-switching/
 │   ├── day-20-analyzing-stp/
-│   └── day-21-configuring-stp/
+│   ├── day-21-configuring-stp/
+│   └── day-22-rapid-stp/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -50,6 +51,7 @@ ccna/
 | 18 | [Multilayer Switching](labs/day-18-multilayer-switching/) | SVIs / routed ports / ip routing | ✅ writeup · ✅ .pkt · ✅ 5 screenshots · ✅ 2 gifs |
 | 20 | [Analyzing STP](labs/day-20-analyzing-stp/) | 802.1D root / designated / alternate | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
 | 21 | [Configuring Spanning Tree](labs/day-21-configuring-stp/) | PVST+ roots / cost / PortFast / BPDU Guard | ✅ writeup · ✅ .pkt · ✅ 6 screenshots |
+| 22 | [Rapid STP](labs/day-22-rapid-stp/) | RSTP roles / edge · P2p · shared link types | ✅ writeup · ✅ .pkt · ✅ 9 screenshots |
 
 *(rows added as labs are completed)*
 

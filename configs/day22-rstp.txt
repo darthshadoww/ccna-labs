@@ -1,0 +1,35 @@
+! Day 22 — Rapid STP
+
+spanning-tree mode rapid-pvst
+
+! SW1 — root (lowest MAC). Hub ports shared; SW2 link P2p
+interface FastEthernet0/1
+ spanning-tree link-type point-to-point
+interface range FastEthernet0/2 - 3 , FastEthernet0/24
+ spanning-tree link-type shared
+
+! SW2 — switch-switch P2p; PCs edge
+interface range FastEthernet0/1 - 2 , GigabitEthernet0/1
+ spanning-tree link-type point-to-point
+interface range FastEthernet0/23 - 24
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+! SW3 — F0/2 is the hub uplink to the root
+interface FastEthernet0/2
+ spanning-tree link-type shared
+interface range FastEthernet0/1 , GigabitEthernet0/1
+ spanning-tree link-type point-to-point
+interface FastEthernet0/24
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+! SW4
+interface range FastEthernet0/1 - 2
+ spanning-tree link-type point-to-point
+interface FastEthernet0/24
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+! Verify Type column: P2p / Shr
+show spanning-tree
