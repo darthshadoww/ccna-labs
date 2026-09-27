@@ -1,0 +1,49 @@
+! Day 23 — EtherChannel
+
+! ASW1 — L2 LACP trunk to DSW1
+interface range GigabitEthernet0/1 - 2
+ channel-group 1 mode active
+ switchport mode trunk
+interface Port-channel1
+ switchport mode trunk
+
+! DSW1 — LACP to ASW1 + L3 static to DSW2
+interface range GigabitEthernet1/0/3 - 4
+ channel-group 1 mode active
+ switchport mode trunk
+interface range GigabitEthernet1/0/1 - 2
+ no switchport
+ channel-group 3 mode on
+interface Port-channel3
+ no switchport
+ ip address 10.0.0.1 255.255.255.252
+ip routing
+ip route 172.16.2.0 255.255.255.0 10.0.0.2
+
+! ASW2 — L2 PAgP trunk to DSW2
+interface range GigabitEthernet0/1 - 2
+ channel-group 2 mode desirable
+ switchport mode trunk
+interface Port-channel2
+ switchport mode trunk
+
+! DSW2
+interface range GigabitEthernet1/0/3 - 4
+ channel-group 2 mode desirable
+ switchport mode trunk
+interface range GigabitEthernet1/0/1 - 2
+ no switchport
+ channel-group 3 mode on
+interface Port-channel3
+ no switchport
+ ip address 10.0.0.2 255.255.255.252
+ip routing
+ip route 172.16.1.0 255.255.255.0 10.0.0.1
+
+! All four switches — Q6
+port-channel load-balance src-dst-ip
+
+! Verify
+show etherchannel summary
+show etherchannel load-balance
+show ip route

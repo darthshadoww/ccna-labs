@@ -26,7 +26,8 @@ ccna/
 │   ├── day-18-multilayer-switching/
 │   ├── day-20-analyzing-stp/
 │   ├── day-21-configuring-stp/
-│   └── day-22-rapid-stp/
+│   ├── day-22-rapid-stp/
+│   └── day-23-etherchannel/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -52,6 +53,7 @@ ccna/
 | 20 | [Analyzing STP](labs/day-20-analyzing-stp/) | 802.1D root / designated / alternate | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
 | 21 | [Configuring Spanning Tree](labs/day-21-configuring-stp/) | PVST+ roots / cost / PortFast / BPDU Guard | ✅ writeup · ✅ .pkt · ✅ 6 screenshots |
 | 22 | [Rapid STP](labs/day-22-rapid-stp/) | RSTP roles / edge · P2p · shared link types | ✅ writeup · ✅ .pkt · ✅ 9 screenshots |
+| 23 | [EtherChannel](labs/day-23-etherchannel/) | LACP / PAgP / L3 static / src-dst-ip hash | ✅ writeup · ✅ .pkt · ✅ 16 screenshots |
 
 *(rows added as labs are completed)*
 
