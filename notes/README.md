@@ -14,6 +14,7 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 | [Day 21 — Configuring STP](day-21-configuring-stp.md) | root primary/secondary, port cost vs priority, PortFast, BPDU Guard |
 | [Day 22 — Rapid STP](day-22-rapid-stp.md) | RSTP / Rapid PVST+, Alternate, P2p vs shared vs edge |
 | [Day 23 — EtherChannel](day-23-etherchannel.md) | LACP, PAgP, static L3 Po, load-balance src-mac → src-dst-ip |
+| [Day 24 — Floating statics](day-24-floating-static.md) | AD 111 backup, OSPF 110 primary, failover through ISP |
 
 ## Suggested cheatsheets to add over time
 
@@ -23,5 +24,5 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 - Port numbers & protocols
 - VLAN / trunking / STP command reference — [Day 16](day-16-vlans.md) + [Day 17](day-17-vlans.md) + [Day 20](day-20-stp.md) + [Day 21](day-21-configuring-stp.md) + [Day 22](day-22-rapid-stp.md)
 - EtherChannel — [Day 23](day-23-etherchannel.md)
-- Static & dynamic routing (OSPF) command reference
+- Static & dynamic routing (OSPF) command reference — floating statics in [Day 24](day-24-floating-static.md)
 - ACL and NAT syntax patterns

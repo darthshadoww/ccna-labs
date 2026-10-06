@@ -19,6 +19,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day21-stp.txt](day21-stp.txt) | Day 21 STP — roots, cost, PortFast, BPDU Guard |
 | [day22-rstp.txt](day22-rstp.txt) | Day 22 RSTP — Rapid PVST+, link-type shared / P2p |
 | [day23-etherchannel.txt](day23-etherchannel.txt) | Day 23 EtherChannel — LACP, PAgP, L3 static, src-dst-ip |
+| [day24-floating-static.txt](day24-floating-static.txt) | Day 24 floating statics — AD 111 via ISP |
 
 Grab a config from a device with:
 

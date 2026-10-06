@@ -1,0 +1,19 @@
+! Day 24 — Floating static routes
+! OSPF (AD 110) is primary on 10.0.0.0/30. These statics only install if that link dies.
+
+! R1
+ip route 0.0.0.0 0.0.0.0 203.0.113.9
+ip route 10.0.2.0 255.255.255.0 203.0.113.1 111
+
+! R2
+ip route 0.0.0.0 0.0.0.0 203.0.113.13
+ip route 10.0.1.0 255.255.255.0 203.0.113.5 111
+
+! Failover test (both routers)
+interface GigabitEthernet0/2/0
+ shutdown
+
+! Verify
+show ip route
+show running-config | include ip route
+show ip ospf neighbor
