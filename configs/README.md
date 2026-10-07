@@ -20,6 +20,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day22-rstp.txt](day22-rstp.txt) | Day 22 RSTP — Rapid PVST+, link-type shared / P2p |
 | [day23-etherchannel.txt](day23-etherchannel.txt) | Day 23 EtherChannel — LACP, PAgP, L3 static, src-dst-ip |
 | [day24-floating-static.txt](day24-floating-static.txt) | Day 24 floating statics — AD 111 via ISP |
+| [day26-ospf.txt](day26-ospf.txt) | Day 26 OSPF Part 1 — area 0, loopbacks, default originate |
 
 Grab a config from a device with:
 

@@ -1,0 +1,84 @@
+! Day 26 — OSPF Part 1 (area 0)
+
+! R1
+hostname R1
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+interface GigabitEthernet0/0
+ ip address 10.0.12.1 255.255.255.252
+ no shutdown
+interface FastEthernet1/0
+ ip address 10.0.13.1 255.255.255.252
+ no shutdown
+interface GigabitEthernet3/0
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+ip route 0.0.0.0 0.0.0.0 203.0.113.2
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.12.0 0.0.0.3 area 0
+ network 10.0.13.0 0.0.0.3 area 0
+ network 1.1.1.1 0.0.0.0 area 0
+ passive-interface Loopback0
+ default-information originate
+
+! R2
+hostname R2
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+interface GigabitEthernet0/0
+ ip address 10.0.12.2 255.255.255.252
+ no shutdown
+interface FastEthernet1/0
+ ip address 10.0.24.1 255.255.255.252
+ no shutdown
+router ospf 1
+ router-id 2.2.2.2
+ network 10.0.12.0 0.0.0.3 area 0
+ network 10.0.24.0 0.0.0.3 area 0
+ network 2.2.2.2 0.0.0.0 area 0
+ passive-interface Loopback0
+
+! R3
+hostname R3
+interface Loopback0
+ ip address 3.3.3.3 255.255.255.255
+interface FastEthernet1/0
+ ip address 10.0.13.2 255.255.255.252
+ no shutdown
+interface FastEthernet2/0
+ ip address 10.0.34.1 255.255.255.252
+ no shutdown
+router ospf 1
+ router-id 3.3.3.3
+ network 10.0.13.0 0.0.0.3 area 0
+ network 10.0.34.0 0.0.0.3 area 0
+ network 3.3.3.3 0.0.0.0 area 0
+ passive-interface Loopback0
+
+! R4
+hostname R4
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.255
+interface GigabitEthernet0/0
+ ip address 192.168.4.254 255.255.255.0
+ no shutdown
+interface FastEthernet1/0
+ ip address 10.0.24.2 255.255.255.252
+ no shutdown
+interface FastEthernet2/0
+ ip address 10.0.34.2 255.255.255.252
+ no shutdown
+router ospf 1
+ router-id 4.4.4.4
+ network 10.0.24.0 0.0.0.3 area 0
+ network 10.0.34.0 0.0.0.3 area 0
+ network 192.168.4.0 0.0.0.255 area 0
+ network 4.4.4.4 0.0.0.0 area 0
+ passive-interface Loopback0
+ passive-interface GigabitEthernet0/0
+
+! Verify
+show ip ospf neighbor
+show ip route
+show ip route ospf
