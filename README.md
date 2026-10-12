@@ -30,7 +30,8 @@ ccna/
 │   ├── day-23-etherchannel/
 │   ├── day-24-floating-static/
 │   ├── day-26-ospf-part-1/
-│   └── day-27-ospf-part-2/
+│   ├── day-27-ospf-part-2/
+│   └── day-28-ospf-part-3/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -60,6 +61,7 @@ ccna/
 | 24 | [Floating Static Routes](labs/day-24-floating-static/) | OSPF primary / AD 111 backup via ISP | ✅ writeup · ✅ .pkt · ✅ 7 screenshots · ✅ gif |
 | 26 | [OSPF Part 1](labs/day-26-ospf-part-1/) | Single-area OSPFv2 / passive / O*E2 default | ✅ writeup · ✅ .pkt · ✅ 13 screenshots |
 | 27 | [OSPF Part 2](labs/day-27-ospf-part-2/) | Interface OSPF / ref-bw 10000 / ASBR default | ✅ writeup · ✅ .pkt · ✅ 8 screenshots |
+| 28 | [OSPF Part 3](labs/day-28-ospf-part-3/) | Network type / Hello timers / LSDB / default | ✅ writeup · ✅ .pkt · ✅ 9 screenshots |
 
 *(rows added as labs are completed)*
 

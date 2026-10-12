@@ -1,0 +1,28 @@
+! Day 28 — OSPF Part 3 (fixes)
+
+! 1) R1–R2 serial (clock on DCE)
+interface Serial0/0/0
+ ip address 192.168.12.1 255.255.255.252
+ clock rate 128000
+ ip ospf 1 area 0
+ no shutdown
+
+! 2) R3–R4: Ethernet should be broadcast, not point-to-point
+interface GigabitEthernet0/1
+ no ip ospf network point-to-point
+
+! 3) R5 timers must match R2/R4 (10 / 40)
+interface GigabitEthernet0/0
+ ip ospf hello-interval 10
+ ip ospf dead-interval 40
+
+! 4) R5 ASBR default
+ip route 0.0.0.0 0.0.0.0 203.0.113.2
+router ospf 1
+ default-information originate
+
+! Verify
+show ip ospf neighbor
+show ip ospf interface
+show ip ospf database
+show ip route
