@@ -1,0 +1,38 @@
+! Day 27 — OSPF Part 2 (R1 shown; mirror on R2–R4)
+
+hostname R1
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+ ip ospf 1 area 0
+interface GigabitEthernet0/0
+ ip address 10.0.12.1 255.255.255.252
+ ip ospf 1 area 0
+ no shutdown
+interface FastEthernet1/0
+ ip address 10.0.13.1 255.255.255.252
+ ip ospf 1 area 0
+ no shutdown
+interface GigabitEthernet3/0
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 1.1.1.1
+ auto-cost reference-bandwidth 10000
+ passive-interface Loopback0
+ default-information originate
+
+ip route 0.0.0.0 0.0.0.0 203.0.113.2
+
+! R4 extras
+! interface GigabitEthernet0/0
+!  ip address 192.168.4.254 255.255.255.0
+!  ip ospf 1 area 0
+! router ospf 1
+!  passive-interface GigabitEthernet0/0
+
+! Verify
+show ip ospf neighbor
+show ip ospf interface brief
+show ip route
+show ip ospf

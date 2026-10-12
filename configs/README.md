@@ -21,6 +21,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day23-etherchannel.txt](day23-etherchannel.txt) | Day 23 EtherChannel — LACP, PAgP, L3 static, src-dst-ip |
 | [day24-floating-static.txt](day24-floating-static.txt) | Day 24 floating statics — AD 111 via ISP |
 | [day26-ospf.txt](day26-ospf.txt) | Day 26 OSPF Part 1 — area 0, loopbacks, default originate |
+| [day27-ospf.txt](day27-ospf.txt) | Day 27 OSPF Part 2 — ip ospf 1 area 0, ref-bw, originate |
 
 Grab a config from a device with:
 
