@@ -1,0 +1,24 @@
+! Day 29 — HSRPv2 group 1, VIP 10.0.1.254
+
+! R1 — preferred Active
+interface GigabitEthernet0/0
+ ip address 10.0.1.253 255.255.255.0
+ standby version 2
+ standby 1 ip 10.0.1.254
+ standby 1 priority 255
+ standby 1 preempt
+
+! R2 — Standby
+interface GigabitEthernet0/0
+ ip address 10.0.1.252 255.255.255.0
+ standby version 2
+ standby 1 ip 10.0.1.254
+ standby 1 priority 45
+ standby 1 preempt
+
+! PC gateway = 10.0.1.254
+
+! Verify
+show standby
+show standby brief
+! PC: ping 8.8.8.8  /  tracert 8.8.8.8  (hop 1 = Active physical IP)
