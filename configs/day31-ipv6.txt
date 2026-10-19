@@ -1,0 +1,23 @@
+! Day 31 — IPv6 Part 1 (R1 dual-stack)
+
+ipv6 unicast-routing
+
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ ipv6 address 2001:db8:0:1::1/64
+ no shutdown
+interface GigabitEthernet0/1
+ ip address 192.168.2.1 255.255.255.0
+ ipv6 address 2001:db8:0:2::1/64
+ no shutdown
+interface GigabitEthernet0/2
+ ip address 192.168.3.1 255.255.255.0
+ ipv6 address 2001:db8:0:3::1/64
+ no shutdown
+
+! PCs: 2001:db8:0:X::2/64  gw 2001:db8:0:X::1
+
+! Verify
+show ipv6 interface brief
+show ipv6 route
+! PC1: ping 2001:db8:0:3::2

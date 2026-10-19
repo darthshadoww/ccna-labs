@@ -24,6 +24,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day27-ospf.txt](day27-ospf.txt) | Day 27 OSPF Part 2 — ip ospf 1 area 0, ref-bw, originate |
 | [day28-ospf.txt](day28-ospf.txt) | Day 28 OSPF Part 3 — network type, timers, Type-5 default |
 | [day29-hsrp.txt](day29-hsrp.txt) | Day 29 HSRPv2 — group 1, VIP .254, preempt |
+| [day31-ipv6.txt](day31-ipv6.txt) | Day 31 IPv6 Part 1 — unicast-routing, three /64s |
 
 Grab a config from a device with:
 
