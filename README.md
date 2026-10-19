@@ -33,7 +33,8 @@ ccna/
 │   ├── day-27-ospf-part-2/
 │   ├── day-28-ospf-part-3/
 │   ├── day-29-hsrp/
-│   └── day-31-ipv6-part-1/
+│   ├── day-31-ipv6-part-1/
+│   └── day-32-ipv6-part-2/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -66,6 +67,7 @@ ccna/
 | 28 | [OSPF Part 3](labs/day-28-ospf-part-3/) | Network type / Hello timers / LSDB / default | ✅ writeup · ✅ .pkt · ✅ 9 screenshots |
 | 29 | [HSRP Configuration](labs/day-29-hsrp/) | HSRPv2 VIP / Active-Standby / preempt | ✅ writeup · ✅ .pkt · ✅ 7 screenshots |
 | 31 | [IPv6 Configuration Part 1](labs/day-31-ipv6-part-1/) | Dual-stack / ipv6 unicast-routing / /64 | ✅ writeup · ✅ .pkt · ✅ 3 screenshots · ✅ gif |
+| 32 | [IPv6 Configuration Part 2](labs/day-32-ipv6-part-2/) | EUI-64 / ipv6 enable / FE80 statics | ✅ writeup · ✅ .pkt · ✅ 12 screenshots |
 
 *(rows added as labs are completed)*
 
