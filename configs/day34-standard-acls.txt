@@ -1,0 +1,49 @@
+! Day 34 — Standard ACLs (R1 numbered, R2 named)
+
+! ----- OSPF -----
+! R1
+router ospf 1
+ network 172.16.0.0 0.0.255.255 area 0
+ network 203.0.113.0 0.0.0.3 area 0
+
+! R2
+router ospf 1
+ network 192.168.0.0 0.0.255.255 area 0
+ network 203.0.113.0 0.0.0.3 area 0
+
+! ----- R2 named (closest to servers) -----
+ip access-list standard TO_SRV1
+ permit 172.16.1.0 0.0.0.255
+ permit 172.16.2.0 0.0.0.255
+! host-only policy would be:
+!  permit 172.16.1.1 0.0.0.0
+!  permit 172.16.2.1 0.0.0.0
+interface GigabitEthernet0/0
+ ip access-group TO_SRV1 out
+
+ip access-list standard TO_SRV2
+ deny 172.16.2.0 0.0.0.255
+ permit any
+interface GigabitEthernet0/1
+ ip access-group TO_SRV2 out
+
+! ----- R1 numbered (172.16 LANs must not talk) -----
+access-list 1 deny 172.16.1.0 0.0.0.255
+access-list 1 deny 192.168.1.0 0.0.0.255
+access-list 1 permit any
+access-list 2 deny 172.16.2.0 0.0.0.255
+access-list 2 permit any
+interface GigabitEthernet0/0
+ ip access-group 2 in
+interface GigabitEthernet0/1
+ ip access-group 1 in
+
+! Verify
+show ip access-lists
+show ip interface g0/0
+show ip route
+! PC1: ping 192.168.1.100   ! allow
+! PC1: ping 192.168.2.100   ! allow
+! PC1: ping 172.16.2.1      ! deny
+! PC3: ping 192.168.1.100   ! allow
+! PC3: ping 192.168.2.100   ! deny

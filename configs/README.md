@@ -26,6 +26,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day29-hsrp.txt](day29-hsrp.txt) | Day 29 HSRPv2 — group 1, VIP .254, preempt |
 | [day31-ipv6.txt](day31-ipv6.txt) | Day 31 IPv6 Part 1 — unicast-routing, three /64s |
 | [day32-ipv6.txt](day32-ipv6.txt) | Day 32 IPv6 Part 2 — EUI-64, ipv6 enable, FE80 statics |
+| [day34-standard-acls.txt](day34-standard-acls.txt) | Day 34 Standard ACLs — numbered R1, named R2 |
 
 Grab a config from a device with:
 
