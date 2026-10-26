@@ -35,7 +35,8 @@ ccna/
 │   ├── day-29-hsrp/
 │   ├── day-31-ipv6-part-1/
 │   ├── day-32-ipv6-part-2/
-│   └── day-34-standard-acls/
+│   ├── day-34-standard-acls/
+│   └── day-35-extended-acls/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -70,6 +71,7 @@ ccna/
 | 31 | [IPv6 Configuration Part 1](labs/day-31-ipv6-part-1/) | Dual-stack / ipv6 unicast-routing / /64 | ✅ writeup · ✅ .pkt · ✅ 3 screenshots · ✅ gif |
 | 32 | [IPv6 Configuration Part 2](labs/day-32-ipv6-part-2/) | EUI-64 / ipv6 enable / FE80 statics | ✅ writeup · ✅ .pkt · ✅ 12 screenshots |
 | 34 | [Standard ACLs](labs/day-34-standard-acls/) | Numbered + named standard ACLs / OSPF | ✅ writeup · ✅ .pkt · ✅ 12 screenshots |
+| 35 | [Extended ACLs](labs/day-35-extended-acls/) | Proto / src / dst / port · closest to source | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
 
 *(rows added as labs are completed)*
 

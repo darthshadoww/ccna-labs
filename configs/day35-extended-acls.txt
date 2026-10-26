@@ -1,0 +1,20 @@
+! Day 35 — Extended ACLs (R1, closest to source)
+
+ip access-list extended 101
+ deny ip 172.16.2.0 0.0.0.255 host 172.16.1.1
+ deny tcp 172.16.2.0 0.0.0.255 192.168.2.100 0.0.0.255 eq 80
+ deny tcp 172.16.2.0 0.0.0.255 192.168.2.100 0.0.0.255 eq 443
+ permit ip any any
+interface GigabitEthernet0/1
+ ip access-group 101 in
+
+ip access-list extended 102
+ deny tcp 172.16.1.0 0.0.0.255 host 192.168.1.100 eq domain
+ permit ip any any
+interface GigabitEthernet0/0
+ ip access-group 102 in
+
+! Verify
+show ip access-lists
+show ip interface g0/0
+show ip interface g0/1

@@ -22,6 +22,7 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 | [Day 31 — IPv6 Part 1](day-31-ipv6-part-1.md) | Dual-stack, global unicast, link-local, ipv6 unicast-routing |
 | [Day 32 — IPv6 Part 2](day-32-ipv6-part-2.md) | EUI-64, ipv6 enable (LL only), statics via FE80 next hop |
 | [Day 34 — Standard ACLs](day-34-standard-acls.md) | Source-only ACLs, named vs numbered, closest-to-destination |
+| [Day 35 — Extended ACLs](day-35-extended-acls.md) | Proto + src + dst + port, closest to source |
 
 ## Suggested cheatsheets to add over time
 
@@ -34,4 +35,4 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 - Static & dynamic routing (OSPF) command reference — [Day 24](day-24-floating-static.md) + [Day 26](day-26-ospf-part-1.md) + [Day 27](day-27-ospf-part-2.md) + [Day 28](day-28-ospf-part-3.md)
 - FHRP / HSRP — [Day 29](day-29-hsrp.md)
 - IPv6 — [Day 31](day-31-ipv6-part-1.md) + [Day 32](day-32-ipv6-part-2.md)
-- ACL and NAT syntax patterns — started in [Day 34](day-34-standard-acls.md)
+- ACL and NAT syntax patterns — [Day 34](day-34-standard-acls.md) + [Day 35](day-35-extended-acls.md)
