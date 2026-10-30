@@ -1,0 +1,40 @@
+! Day 36 — CDP (default) + LLDP enable
+
+! CDP is already on. Map links:
+show cdp neighbors
+show cdp neighbors detail
+show cdp interface
+
+! Optional lab step: hide CDP from PCs
+! interface f0/10
+!  no cdp enable
+
+! ----- Routers R1 / R2 / R3 -----
+interface GigabitEthernet0/0
+ lldp transmit
+ lldp receive
+interface GigabitEthernet0/1
+ lldp transmit
+ lldp receive
+interface GigabitEthernet0/2
+ lldp transmit
+ lldp receive
+
+! ----- SW1 G0/1 (to R1 G0/2) -----
+interface GigabitEthernet0/1
+ lldp transmit
+ lldp receive
+
+! ----- SW2 G0/2 (to R2 G0/1) -----
+interface GigabitEthernet0/2
+ lldp transmit
+ lldp receive
+
+! ----- SW3 G0/1 (to R3 G0/0) -----
+interface GigabitEthernet0/1
+ lldp transmit
+ lldp receive
+
+! Verify
+show lldp neighbors
+! not: show lldp neighbours
