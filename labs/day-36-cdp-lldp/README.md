@@ -12,9 +12,18 @@
 
 ## 🗺️ Topology
 
-Three 2911 routers, three 2960 switches, one PC per LAN. Triangle of `/30` links between routers; each LAN is `192.168.X.0/24` with the router at `.254`.
+Three 2911 routers in a triangle, three 2960 switches, one PC per LAN. Links start **unlabeled** — CDP is how you fill in IPs and interface IDs.
 
-Mapped from `show cdp neighbors` (no topology screenshot this lab):
+**Tasks:**
+
+1. Use CDP (and other commands) to identify and label missing IPs and interface IDs.
+2. Disable CDP on the switch interfaces connected to PCs (`no cdp enable`).
+3. Disable CDP globally on each device (`no cdp run`).
+4. Enable LLDP globally, and enable Tx/Rx on interfaces to other network devices (`lldp transmit` / `lldp receive` — Tx/Rx starts **off**).
+
+![Day 36 topology — CDP then LLDP](day36-topology.png)
+
+Mapped from `show cdp neighbors`:
 
 | Local | Iface | Neighbor | Neighbor iface | Subnet |
 |-------|-------|----------|----------------|--------|
@@ -129,7 +138,8 @@ CDP is already drawing the unlabeled topology; LLDP is the standards version of 
 
 - `README.md` — this writeup
 - `day36-cdp-lldp.pkt` — Packet Tracer save
-- `day36-r1-cdp.png` — CDP neighbor map (main photo)
+- `day36-topology.png` — unlabeled topology + tasks (main photo)
+- `day36-r1-cdp.png` — CDP neighbor map
 - `day36-r2-cdp.png` / `day36-r3-cdp.png`
 - `day36-r1-lldp.png` / `day36-r2-lldp.png` / `day36-r3-lldp.png`
 - `day36-sw1-lldp.png` / `day36-sw2-lldp.png` / `day36-sw3-lldp.png`

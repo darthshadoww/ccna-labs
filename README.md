@@ -73,7 +73,7 @@ ccna/
 | 32 | [IPv6 Configuration Part 2](labs/day-32-ipv6-part-2/) | EUI-64 / ipv6 enable / FE80 statics | ✅ writeup · ✅ .pkt · ✅ 12 screenshots |
 | 34 | [Standard ACLs](labs/day-34-standard-acls/) | Numbered + named standard ACLs / OSPF | ✅ writeup · ✅ .pkt · ✅ 12 screenshots |
 | 35 | [Extended ACLs](labs/day-35-extended-acls/) | Proto / src / dst / port · closest to source | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
-| 36 | [CDP & LLDP](labs/day-36-cdp-lldp/) | CDP map / enable LLDP both ends | ✅ writeup · ✅ .pkt · ✅ 9 screenshots |
+| 36 | [CDP & LLDP](labs/day-36-cdp-lldp/) | CDP map / enable LLDP both ends | ✅ writeup · ✅ .pkt · ✅ 10 screenshots |
 
 *(rows added as labs are completed)*
 
