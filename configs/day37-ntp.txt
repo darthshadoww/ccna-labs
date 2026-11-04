@@ -1,0 +1,26 @@
+! Day 37 — NTP (lab-only MD5 key)
+
+! ----- R1 (client of 1.1.1.1, source for R2/R3) -----
+ntp server 1.1.1.1
+ntp authentication-key 1 md5 melihword
+ntp authenticate
+ntp trusted-key 1
+ntp update-calendar
+
+! ----- R2 -----
+ntp authentication-key 1 md5 melihword
+ntp authenticate
+ntp trusted-key 1
+ntp server 192.168.12.1 key 1
+ntp update-calendar
+
+! ----- R3 -----
+ntp authentication-key 1 md5 melihword
+ntp authenticate
+ntp trusted-key 1
+ntp server 192.168.13.1 key 1
+ntp update-calendar
+
+! Verify
+show ntp status
+show ntp associations
