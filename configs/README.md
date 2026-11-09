@@ -30,6 +30,7 @@ Saved running-configurations and reusable CLI snippets per device.
 | [day35-extended-acls.txt](day35-extended-acls.txt) | Day 35 Extended ACLs — 101/102 proto + port |
 | [day36-cdp-lldp.txt](day36-cdp-lldp.txt) | Day 36 CDP & LLDP — lldp transmit/receive |
 | [day37-ntp.txt](day37-ntp.txt) | Day 37 NTP — server, MD5 key, update-calendar |
+| [day39-dhcp.txt](day39-dhcp.txt) | Day 39 DHCP — pools, ip address dhcp, helper |
 
 Grab a config from a device with:
 

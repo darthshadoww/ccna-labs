@@ -1,0 +1,36 @@
+! Day 39 — DHCP server (R2), client + relay (R1)
+
+! ----- R2 (server) -----
+ip dhcp excluded-address 192.168.1.1 192.168.1.10
+ip dhcp excluded-address 192.168.2.1 192.168.2.10
+ip dhcp excluded-address 203.0.113.1
+
+ip dhcp pool POOL1
+ network 192.168.1.0 255.255.255.0
+ dns-server 8.8.8.8
+ domain-name jeremysitlab.com
+ default-router 192.168.1.1
+
+ip dhcp pool POOL2
+ network 192.168.2.0 255.255.255.0
+ dns-server 8.8.8.8
+ domain-name jeremysitlab.com
+ default-router 192.168.2.1
+
+ip dhcp pool POOL3
+ network 203.0.113.0 255.255.255.252
+
+! ----- R1 -----
+interface GigabitEthernet0/0
+ ip address dhcp
+interface GigabitEthernet0/1
+ ip address 192.168.1.1 255.255.255.0
+ ip helper-address 203.0.113.1
+
+! PCs: ipconfig /renew
+! Expected: R1 = 203.0.113.2 ; PC1 = 192.168.1.11 ; PC2 = 192.168.2.11
+
+! Verify
+show ip dhcp pool
+show ip dhcp binding
+show ip interface brief

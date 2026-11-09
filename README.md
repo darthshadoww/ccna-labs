@@ -38,7 +38,8 @@ ccna/
 │   ├── day-34-standard-acls/
 │   ├── day-35-extended-acls/
 │   ├── day-36-cdp-lldp/
-│   └── day-37-ntp/
+│   ├── day-37-ntp/
+│   └── day-39-dhcp/
 ├── configs/       # Saved running-configs & key CLI snippets (.txt)
 ├── notes/         # Study notes, cheatsheets, exam-topic summaries
 └── README.md
@@ -76,6 +77,7 @@ ccna/
 | 35 | [Extended ACLs](labs/day-35-extended-acls/) | Proto / src / dst / port · closest to source | ✅ writeup · ✅ .pkt · ✅ 5 screenshots |
 | 36 | [CDP & LLDP](labs/day-36-cdp-lldp/) | CDP map / enable LLDP both ends | ✅ writeup · ✅ .pkt · ✅ 10 screenshots |
 | 37 | [NTP](labs/day-37-ntp/) | Client / MD5 auth / stratum 2→3 | ✅ writeup · ✅ .pkt · ✅ 7 screenshots |
+| 39 | [DHCP](labs/day-39-dhcp/) | Server / client / ip helper-address | ✅ writeup · ✅ .pkt · ✅ 2 screenshots |
 
 *(rows added as labs are completed)*
 

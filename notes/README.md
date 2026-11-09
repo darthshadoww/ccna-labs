@@ -25,6 +25,7 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 | [Day 35 — Extended ACLs](day-35-extended-acls.md) | Proto + src + dst + port, closest to source |
 | [Day 36 — CDP & LLDP](day-36-cdp-lldp.md) | CDP on by default, LLDP enable tx/rx both ends |
 | [Day 37 — NTP](day-37-ntp.md) | ntp server, MD5 auth, stratum, update-calendar |
+| [Day 39 — DHCP](day-39-dhcp.md) | IOS DHCP server, client, relay / DORA |
 
 ## Suggested cheatsheets to add over time
 
@@ -40,3 +41,4 @@ Bulk notes taken ~every 10 lectures (authored in Obsidian, exported here as mark
 - ACL and NAT syntax patterns — [Day 34](day-34-standard-acls.md) + [Day 35](day-35-extended-acls.md)
 - CDP / LLDP — [Day 36](day-36-cdp-lldp.md)
 - NTP — [Day 37](day-37-ntp.md)
+- DHCP — [Day 39](day-39-dhcp.md)
